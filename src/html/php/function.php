@@ -8,7 +8,7 @@ function getFileTime($path){
 	}else{
 		$file = $path."?".time();
 	}
-	return $file;
+	return trim($file,"\t .&?\\/");
 }
 function getFileContent($path, $type="html"){
 	$return = "";
