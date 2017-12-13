@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20161003 at Sat Dec  9 21:26:43 2017
+ By www-data
+</metadata>
+<defs>
+<font id="webfont" horiz-adv-x="1024" >
+  <font-face 
+    font-family="webfont"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="1024"
+    panose-1="0 0 0 0 0 0 0 0 0 0"
+    ascent="960"
+    descent="-64"
+    bbox="157 0 896 896"
+    underline-thickness="0"
+    underline-position="0"
+    unicode-range="U+0001-FFFD"
+  />
+<missing-glyph horiz-adv-x="0" 
+ />
+    <glyph glyph-name=".notdef" unicode="&#xfffd;" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="glyph1" horiz-adv-x="0" 
+d="M0 0v0v0v0z" />
+    <glyph glyph-name="glyph1" horiz-adv-x="0" 
+d="M0 0v0v0v0z" />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="341" 
+ />
+    <glyph glyph-name="uni0001" horiz-adv-x="0" 
+d="M0 0v0v0v0z" />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="512" 
+d="M0 0v0v0v0z" />
+    <glyph glyph-name="uniE600" unicode="&#xe600;" 
+d="M800 448l-448 448l-64 -64l384 -384l-384 -384l64 -64z" />
+    <glyph glyph-name="uniE601" unicode="&#xe601;" 
+d="M224 448l448 448l64 -64l-384 -384l384 -384l-64 -64z" />
+    <glyph glyph-name="uniE602" unicode="&#xe602;" 
+d="M800 704h-576q-7 0 -12.5 -2.5t-10 -7t-7 -10t-2.5 -12.5v-32q0 -7 2.5 -12.5t7 -10t10 -7t12.5 -2.5h576q7 0 12.5 2.5t10 7t7 10t2.5 12.5v32q0 7 -2.5 12.5t-7 10t-10 7t-12.5 2.5v0zM800 512h-576q-7 0 -12.5 -2.5t-10 -7t-7 -10t-2.5 -12.5v-32q0 -7 2.5 -12.5
+t7 -10t10 -7t12.5 -2.5h576q7 0 12.5 2.5t10 7t7 10t2.5 12.5v32q0 7 -2.5 12.5t-7 10t-10 7t-12.5 2.5v0zM800 320h-576q-7 0 -12.5 -2.5t-10 -7t-7 -10t-2.5 -12.5v-32q0 -7 2.5 -12.5t7 -10t10 -7t12.5 -2.5h576q7 0 12.5 2.5t10 7t7 10t2.5 12.5v32q0 7 -2.5 12.5t-7 10
+t-10 7t-12.5 2.5v0z" />
+    <glyph glyph-name="uniE603" unicode="&#xe603;" 
+d="M804 660l-277 -277l-278 276l-92 -91l369 -390l370 390z" />
+  </font>
+</defs></svg>

@@ -1,4 +1,7 @@
-yepnope('<?php echo getFileTime("https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js");?>', undefined, function() {
+window.scaleKof		= .14;
+window.transAniY	= .4;
+window.wowOffset	= .1;
+yepnope('https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js', undefined, function() {
 	WebFont.load({
 		google: {
 			families: [

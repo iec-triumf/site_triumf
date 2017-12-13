@@ -66,6 +66,7 @@ module.exports = function(grunt){
 						'bower_components/jquery.scroolly/src/jquery.scroolly.js',
 						'bower_components/slick-carousel/slick/slick.js',
 						'bower_components/parallax.js/parallax.js',
+						'bower_components/wow/dist/wow.js',
 						'bower_components/fancybox/dist/jquery.fancybox.js',
 						'bower_components/arcticModal/arcticmodal/jquery.arcticmodal.js',
 						'bower_components/jquery_lazyload/jquery.lazyload.js',
@@ -84,6 +85,7 @@ module.exports = function(grunt){
 			main: {
 				files: {
 					'assets/templates/<%= globalConfig.template%>/js/main.js': [
+						'src/js/dropdown.js',
 						'src/js/main.js',
 					]
 				}

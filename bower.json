@@ -31,7 +31,8 @@
     "parallax.js": "https://github.com/pixelcog/parallax.js.git#^1.4.2",
     "mixitup": "https://github.com/patrickkunka/mixitup.git#^3.2.2",
     "Jarallax": "https://github.com/CodeHunger/Jarallax.git",
-    "jQuery": "https://github.com/chayka/jQuery.Scroolly",
-    "jquery.scroolly": "https://github.com/chayka/jQuery.Scroolly.git#^0.0.1"
+    "jquery.scroolly": "https://github.com/chayka/jQuery.Scroolly.git#^0.0.1",
+    "wow": "wowjs#^1.1.2",
+    "animate.css": "https://github.com/daneden/animate.css.git#^3.5.2"
   }
 }

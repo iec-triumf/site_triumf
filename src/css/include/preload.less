@@ -1,0 +1,106 @@
+.oninit, .preload {
+	overflow: hidden;
+	.preloader {
+		position: fixed;
+		display: block;
+		opacity: 1;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		width: 100%;
+		height: 100%;
+		width: 100vw;
+		height: 100vh;
+		z-index: 99999999999;
+		overflow-y: scroll;
+		&:before, &:after {
+			content: "";
+			display: block;
+			position: fixed;
+			width: 100%;
+			left: 0px;
+			right: 0px;
+			height: 51%;
+			background-color: #fff;
+			transition: all .4s ease;
+			z-index: 200;
+		}
+		&:before {
+			top: 0px;
+		}
+		&:after {
+			bottom: 0px;
+		}
+		&.complete {
+			&:before, &:after {
+				height: 0%;
+				
+			}
+			.preloader {
+				&-progress {
+					opacity: 0;
+				}
+			}
+		}
+		&-progress {
+			position: fixed;
+			left: 0px;
+			right: 0px;
+			width: 100%;
+			width: 100vw;
+			top: 50%;
+			margin-top: 1.5px;
+			opacity: 1;
+			transition: opacity .01s ease;
+			z-index: 1000;
+			&-bar {
+				height: 3px;
+				background-color: #046ecf;
+				position: relative;
+				will-change: width;
+			}
+		}
+	}
+}
+.preload {
+	.preloader {
+		&-progress {
+			&-bar {
+				width: 35%;
+			}
+		}
+	}
+}
+body {
+	&.start, &.oninit {
+		.preloader {
+			&-progress {
+				&-bar {
+					transition: width .5s ease;
+				}
+			}
+		}
+	}
+	&.start {
+		.preloader {
+			&-progress {
+				&-bar {
+					width: 0%;
+				}
+			}
+		}
+	}
+	&.oninit {
+		.preloader {
+			&-progress {
+				&-bar {
+					width: 15%;
+				}
+			}
+		}
+	}
+	&.complete {
+		overflow: auto;
+	}
+}

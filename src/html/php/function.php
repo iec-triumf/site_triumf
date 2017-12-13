@@ -29,4 +29,6 @@ function getFileContent($path, $type="html"){
 	}
 	return $return;
 }
+$start = microtime(true);
+ob_start();
 ?>

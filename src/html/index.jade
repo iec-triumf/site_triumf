@@ -3,8 +3,14 @@ doctype html
 include php/function.php
 html.no-js(lang="ru" prefix="og: http://ogp.me/ns#")
 	include inc/head
-	body.preload
+	body.start
+		script(type="text/javascript").
+			document.body.classList.add("preload");
+		.preloader
+			.preloader-progress
+				.preloader-progress-bar
 		.main
+			include inc/menu
 			.header
 				.header-background
 				.header-wrapper
@@ -23,7 +29,7 @@ html.no-js(lang="ru" prefix="og: http://ogp.me/ns#")
 									.button-box-big
 										a.btn.btn-blue(href="javascript:;")
 											span Выбрать вид проверки
-									.button-box-big
+									.button-box-big.red
 										a.btn.btn-red(href="javascript:;")
 											span Раздел для клиента
 								.scroll.text-center
@@ -51,12 +57,80 @@ html.no-js(lang="ru" prefix="og: http://ogp.me/ns#")
 										p
 											|Гарантия качественной услуги или вернём деньги
 			.menu
-				.menu-panel
-		.hero.clearfix
+				.menu-panel.hero.clearfix
+		section.hero.clearfix
 			.hero-animation
-				.hero-animation-wrapper.section
+				.hero-animation-wrapper.section.wow(data-animation-offset="300")
 					.section-head
 						.section-head-content
+							h2
+								|Лучшие предложения и акции
+							p
+								|Подберите специальное предложение на проверку с применением полиграфа (детектора лжи).
+					.section-content
+						.section-row
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.actions-name
+										.heading-stok
+											p.heading-stok-text-price
+												|27%
+											p.heading-stok-text-name
+												|Действительно — бессрочно
+									.actions-photo
+										p.stok-block.blue
+											|Знакомство со скринингом:
+										.stok-block-photo
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.actions-name
+										.heading-stok
+											p.heading-stok-text-price
+												|20%
+											p.heading-stok-text-name
+												|Действительно — до 08.03.18
+									.actions-photo
+										p.stok-block.green
+											|Календарный месяц
+										.stok-block-photo
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.actions-name
+										.heading-stok
+											p.heading-stok-text-price
+												|700 руб.
+											p.heading-stok-text-name
+												|Действительно — до 08.03.18
+									.actions-photo
+										p.stok-block.red
+											|Оцените качество услуг
+										.stok-block-photo
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.actions-name
+										.heading-stok
+											p.heading-stok-text-price
+												|20%
+											p.heading-stok-text-name
+												|Действительно — 03 - 31.01.18
+									.actions-photo
+										p.stok-block.yellow
+											|Январьские скидки
+										.stok-block-photo
+					.section-footer.flexjustify-center
+						a.button-box(href="javascript:;")
+							span
+								|Подробнее
+		section.hero.clearfix
+			.hero-animation
+				.hero-animation-wrapper.section.wow(data-animation-offset="300")
+					.color-line
+					.section-head
+						.section-head-content
+							h2
+								|Высокие стандарты Триумфа
+							p
+								|Качественная проверка на полиграфе окупается в десятки раз. Именно поэтому наши клиенты, юристы возвращаются к нам и рекомендуют своим знакомым.
 					.section-content
 						.section-content-column.hero-slick
 							.slick
@@ -70,36 +144,348 @@ html.no-js(lang="ru" prefix="og: http://ogp.me/ns#")
 									img(src="assets/templates/triumf/images/diploms.png" alt="Дипломы, Сертификаты, Награды")
 								.slick-item
 									img(src="assets/templates/triumf/images/diploms.png" alt="Дипломы, Сертификаты, Награды")
-						.section-content-column.photo
+							.slick-usedots
+							.slick-usearrows
+						.section-content-column.hero-photo
 							img(src="assets/templates/triumf/images/tatyana.png" alt="Татьяна Алфеева")
-						
-					
-		.hero.clearfix
-			h1(style="font-family: 'Pragmatica'; font-weight: 100;")
-				|Pragmatica
-			h1(style="font-family: 'Pragmatica'; font-weight: 200;")
-				|Pragmatica
-			h1(style="font-family: 'Pragmatica'; font-weight: normal;")
-				|Pragmatica
-			h1(style="font-family: 'Pragmatica'; font-weight: bold;")
-				|Pragmatica
-			h1(style="font-family: 'Gilroy'; font-weight: 200;")
-				|Gilroy
-			h1(style="font-family: 'SFUIDisplay'; font-weight: 100;")
-				|SFUIDisplay
-			h1(style="font-family: 'SFUIDisplay'; font-weight: 200;")
-				|SFUIDisplay
-			h1(style="font-family: 'SFUIDisplay'; font-weight: normal;")
-				|SFUIDisplay
-			h1(style="font-family: 'Solomon-Sans'; font-weight: 100;")
-				|Solomon-Sans
-			h1(style="font-family: 'Solomon-Sans'; font-weight: 200;")
-				|Solomon-Sans
-			h1(style="font-family: 'Solomon-Sans'; font-weight: 300;")
-				|Solomon-Sans
-			h1(style="font-family: 'Solomon-Sans'; font-weight: normal;")
-				|Solomon-Sans
-			h1(style="font-family: 'Solomon-Sans'; font-weight: bold;")
-				|Solomon-Sans
+					.section-footer
+						a.button-box(href="javascript:;")
+							span
+								|Подробнее
+		section.hero.clearfix
+			.hero-animation
+				.hero-animation-wrapper.section.wow(data-animation-offset="300")
+					.section-head
+						.section-head-content
+							h2
+								|Проверки на полиграфе
+							p
+								|Наши заказчики уже смогли установить истину, защищая себя от ненадежных людей. Чаще всего проверку на детекторе лжи используют в следующих случаях:
+					.section-content
+						.section-row
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.information-name
+										.heading-stok
+											p.heading-stok-text-info
+												|При приеме на работу новых сотрудников
+									.information-photo
+										.stok-block
+										.stok-block-photo
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.information-name
+										.heading-stok
+											p.heading-stok-text-info
+												|Проверки работающего персонала
+									.information-photo
+										.stok-block
+										.stok-block-photo
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.information-name
+										.heading-stok
+											p.heading-stok-text-info
+												|Расследование по факту хищения
+									.information-photo
+										.stok-block
+										.stok-block-photo
+							.column-standart.col.col-3
+								.column-standart-row.reverse
+									.information-name
+										.heading-stok
+											p.heading-stok-text-info
+												|Расследование по факту хищения
+									.information-photo
+										.stok-block
+										.stok-block-photo
+					.section-footer.flexjustify-center
+						a.button-box(href="javascript:;")
+							span
+								|Подробнее о полиграфе
+		section.hero.clearfix
+			.hero-animation
+				.hero-animation-wrapper.section.triunf.wow(data-animation-offset="300")
+					.section-head
+						.section-head-content
+							h2
+								|Почему выбирают Триумф?
+							p
+								|Экспертные компании отличаются и много зависит от принятыхстандартов проверки на полиграфе руководителем.
+					.section-content
+						.section-row
+							.tabs
+								.tabs-head
+									a.tabs-head-link.active(href="javascript:;" data-tab="tab_triumf_1")
+										|Мощные приемы в исследовании
+									a.tabs-head-link(href="javascript:;" data-tab="tab_triumf_2")
+										|Остерегайтесь подделок
+								.tabs-content
+									.tabs-content-pane.active(data-tab="tab_triumf_1")
+										.tabs-content-pane-flex.vertical
+											.tabs-content-pane-line
+												.slider.hero-slick
+													.slick
+														.slick-item
+															.wrapper-block
+																.container.vertical
+																	ul.faq-request
+																		li
+																			|Почему с одним и тем-же прибором разные специалисты получают разную информацию?
+																		li
+																			|Дело не просто в полиграфе, а насколько грамотно на нем может  работать эксперт. Ведь и  следователи, и врачи  имеют разную эффективность в поиске истины.
+																		li
+																			|Поэтому мы доучиваем эксперта, чтобы у заказчика была самая точная информация
+														.slick-item
+															.wrapper-block
+																.container.vertical
+																	ul.faq-request
+																		li
+																			|Почему у одного эксперта много признательных показаний, а у другого почти нет?
+																		li
+																			|Наш секрет в приемах и навыках, которые получают и оттачивают у лучших мастеров своего дела.
+																		li
+																			|Поэтому мы никогда не считаем, что уже «всё знаем». Так думают гордецы перед своим падением.
+														.slick-item
+															.wrapper-block
+																.container.vertical
+																	ul.faq-request
+																		li
+																			|Почему у вас эксперты работают около 2-х часов и более, а некоторые менее 30-60 мин?
+																		li
+																			|Потому-что мы соблюдаем методику. Теоретически и температуру ртутным градусником можно измерить за 1 минуту, но будут ли результаты точны?
+																		li
+																			|У нас можно осуществить контроль качества, обратившись напрямую к основателю Триумфа.
+																			br
+																			br
+																			strong
+																				|Татьяна Алфеева +7(499)408-40-08.
+													.slick-usedots
+													.slick-usearrows
+												.photo
+									.tabs-content-pane(data-tab="tab_triumf_2")
+										.tabs-content-pane-flex.vertical
+											.tabs-content-pane-line
+												.slider.hero-slick
+													.wrapper-block
+														.container.vertical.line.linered
+															p
+																|Поверхностное тестирование на полиграфе сторонними специалистами, иногда выдаваемые за настоящее исследование, из-за нарушения методики могут представлять угрозу для финансового благополучия организации. Обращаясь в Триумф вы можете быть уверены в том, что здесь всегда соблюдаются требования методики. Настоящее исследование длится около 2 часов и более.
+												.photo
+		section.hero.clearfix
+			.hero-animation
+				.hero-animation-wrapper.section.prices.wow(data-animation-offset="300")
+					.section-head
+						.section-head-content
+							h2
+								|Услуги и цены
+							p
+								|Мы не обещаем самые низкие цены. Мы продаем услуги такого качества, которое действительно способно помочь за разумные деньги.
+					.section-content
+						.section-row
+							.column-standart.vertical.col.col-4.mb-20
+								.column-standart-row
+									.information-name
+										.heading-stok.vertical-center
+											p.heading-stok-text-info
+												|Для физ лиц
+									.information-photo
+										.stok-block
+										.stok-block-photo
+								.column-row.mh-auto.mt-20
+									.column-standart.col.column-line.mh-auto
+										.block-line-column
+											.block-price-column
+												h6
+													|Цена для одного чел. (2 часа)
+												p
+													|От 3 500 руб.
+							.column-standart.vertical.col.col-4.mb-20.active
+								.column-standart-row
+									.information-name
+										.heading-stok.vertical-center
+											p.heading-stok-text-info
+												|Для организаций
+									.information-photo
+										.stok-block
+										.stok-block-photo
+								.column-row.mh-auto.mt-20
+									.column-standart.col.column-line.mh-auto
+										.block-line-column
+											.block-price-column
+												h6
+													|Цена для одного чел. (2 часа)
+												p
+													|От 3 500 руб.
+							.column-standart.vertical.col.col-4.mb-20
+								.column-standart-row
+									.information-name
+										.heading-stok.vertical-center
+											p.heading-stok-text-info
+												|Для суда
+									.information-photo
+										.stok-block
+										.stok-block-photo
+								.column-row.mh-auto.mt-20
+									.column-standart.col.column-line.mh-auto
+										.block-line-column
+											.block-price-column
+												h6
+													|Цена судебной экспертизы (около 4 часов, заключение 60-80 листов)
+												p
+													|От 37 500 руб.
+							
+					.section-footer.flexjustify-center
+						a.button-box(href="javascript:;")
+							span
+								|Подробнее о полиграфе
+		section.hero.clearfix
+			.section-feedback
+				.feedback-wrapper.section-row
+					.info-box-paragraph.col.col-4
+						h5
+							|Оставьте ваши контактные данные мы обязательно перезвоним
+					form.col.col-8.field-container.clearfix(method="POST" name="formfeedback")
+						.section-row.clearfix
+							.column-standart.col.col-4.first
+								input.text-field-standart(type="text" name="first-name" value="" placeholder="Фамилия")
+							.column-standart.col.col-4
+								input.text-field-standart(type="text" name="last-name" value="" placeholder="Пожалуйста представьтесь")
+							.column-standart.col.col-4
+								input.text-field-standart(type="text" name="last-name" value="" placeholder="+7 (XXX) XXX–XX–XX")
+							.column-standart.col.col-4
+								button.button-box(type="submit")
+									span
+										|Жду звонка
+			.section-no-margin.white
+				.centr.wrapper-name-heading.mb-40
+					p
+						|Выберете вид проверки:
+					ul.button-container-big-col.full
+						li
+							a.button-link-service(href="javascript:;")
+								|При приеме на работу
+						li
+							a(href="javascript:;")
+								|Периодические проверки
+						li
+							a.button-link-service(href="javascript:;")
+								|Проверка по факту хищения
+						li
+							a.button-link-service(href="javascript:;")
+								|ПФИ судебная экспертиза
+						li
+							a.button-link-service(href="javascript:;")
+								|Рецензирование для суда
+				.button-container-section
+					a.button-box-big.red(href="javascript:;")
+						|Раздел для клиента
+			footer.footer
+				.wrapper-line-footer-up.clearfix
+					ul.footer-nav-panel-up
+						li
+							a(href="javascript:;")
+								|Услуги и цены
+						li
+							a(href="javascript:;")
+								|Поддержка
+						li
+							a(href="javascript:;")
+								|Акции
+						li
+							a(href="javascript:;")
+								|Компания
+						li
+							a(href="javascript:;")
+								|Информация
+						li
+							a(href="javascript:;")
+								|Новости
+						li
+							a(href="javascript:;")
+								|Статьи
+						li
+							a(href="javascript:;")
+								|Контакты
+				.wrapper-line-footer-contact.clearfix
+					.footer-nav-panel-contact
+						.row-classic-footer.w-row
+							.column-adders.col.col-4
+								.column-adders-text.mb-20
+									|Для физ лиц и организаций:
+								a(href="tel:84951182220").column-adders-link.mb-10
+									|+7 (495) 118-22-20
+								.column-adders-text.mb-20
+									|C 8:00 до 20:00
+								.column-adders-text.mb-20
+									strong.column-adders-text-name
+										|Юзышина Марина
+									br
+									|Менеджер по работе с клиентами.
+							.column-adders.col.col-4
+								.column-adders-text.mb-20
+									|Для суда/следствия:
+								a(href="tel:84994084008").column-adders-link.mb-10
+									|+7 (499) 408-40-08
+								.column-adders-text.mb-20
+									|C 8:00 до 20:00
+								.column-adders-text.mb-20
+									strong.column-adders-text-name
+										|Алфеева Татьяна
+									br
+									|Cертифицированный эксперт высшей категории.
+							.column-adders.right.clearfix.col.col-4
+								.column-adders-text.mb-20
+									|Информация для клиента:
+								ul.column-adders-text-menu
+									li
+										a(href="javascript:;")
+											|Реквизиты
+									li
+										a(href="javascript:;")
+											|Скачать документы
+									li
+										a(href="javascript:;")
+											|Адреса офисов
+									li
+										a(href="javascript:;")
+											|Поддержка
+									li
+										a(href="javascript:;")
+											|Оставить отзыв
+						.row-classic-scblock
+							a(href="javascript:;")
+								img(src="/assets/templates/triumf/images/sc_001.svg" alt="")
+							a(href="javascript:;")
+								img(src="/assets/templates/triumf/images/sc_002.svg" alt="")
+							a(href="javascript:;")
+								img(src="/assets/templates/triumf/images/sc_003.svg" alt="")
+							a(href="javascript:;")
+								img(src="/assets/templates/triumf/images/sc_004.svg" alt="")
+							a(href="javascript:;")
+								img(src="/assets/templates/triumf/images/sc_005.svg" alt="")
+							a(href="javascript:;")
+								img(src="/assets/templates/triumf/images/sc_006.svg" alt="")
+				.wrapper-line-footer-copyright.clearfix
+					.wrapper-line-footer-copyright-down
+						ul.footer-nav-panel-down.clearfix
+							li
+								a(href="javascript:;")
+									|Соглашение с условиями сайта
+							li
+								a(href="javascript:;")
+									|Политика конфиденциальности
+				.wrapper-down-footer
+					.footer-nav-panel-copyright.clearfix
+						.copyright
+							img(src="/assets/templates/triumf/images/logo_footer.svg" alt="")
+							.text-footer.black
+								|ООО Экспертный центр Триумф.
+								br
+								|АНО Судебно–экспертный центр Триумф&nbsp;©&nbsp;2018
+						a(href="https://studionions.ru/" target="_blank")
+							|Разработка сайта
+						a(href="javascript:;")
+							|Карта сайта
 		include inc/javascript
-				
+include php/end.php

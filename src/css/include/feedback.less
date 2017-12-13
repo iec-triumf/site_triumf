@@ -1,0 +1,208 @@
+.section {
+	&-feedback {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 40px;
+		background-color: #f3f4f6;
+		.feedback {
+			&-wrapper {
+				display: flex;
+				width: 100%;
+				max-width: 1200px;
+				min-width: 1170px;
+				margin-right: auto;
+				margin-left: auto;
+				//padding-right: 10px;
+				//padding-left: 10px;
+				justify-content: space-between;
+				> .col-4 {
+					@media (min-width: 768px) and (max-width: 991px){
+						left: 25%;
+						.text-center();
+					}
+					@media(max-width: 767px){
+						width: auto;
+						float: none;
+						margin-left: auto;
+						margin-right: auto;
+						.text-center();
+					}
+				}
+				@media (max-width: 991px){
+					min-width: auto;
+					flex-direction: column;
+				}
+				@media (max-width: 767px){
+					padding-right: 0px;
+					padding-left: 0px;
+					text-align: center;
+				}
+				.info-box-paragraph {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+					max-width: 420px;
+					h1, h2, h3, h4, h5, h6 {
+						margin-top: 0px;
+						margin-bottom: 0px;
+						font-family: Roboto, sans-serif;
+						color: #153466;
+						font-size: 18px;
+						line-height: 1.2em;
+						font-weight: 400;
+						letter-spacing: 0.2px;
+						@media (max-width: 991px){
+							font-size: 22px;
+						}
+						@media (max-width: 767px){
+							font-size: 20px;
+						}
+					}
+				}
+				.field-container {
+					display: flex;
+					margin-left: 0px;
+					height: 60px;
+					.section-row {
+						width: 100%;
+						@media(max-width: 991px) {
+							width: auto;
+						}
+					}
+					@media (max-width: 991px){
+						left: percentage((1 / 12) * 2);
+						height: auto;
+						.column {
+							&-standart {
+								min-height: 80px;
+							}
+						}
+					}
+					@media (max-width: 991px) and (min-width: 768px){
+						.column {
+							&-standart {
+								&:last-child {
+									left: 25%;
+								}
+							}
+						}
+					}
+					@media (max-width: 767px) {
+						left: percentage((1 / 12) * 2);
+						height: auto;
+						.column {
+							&-standart {
+								width: 100%;
+							}
+						}
+					}
+					.first {
+						display: none !important;
+					}
+					.text-field-standart {
+						display: flex;
+						width: 100%;
+						height: 60px;
+						margin-right: 0px;
+						margin-left: 0px;
+						padding-left: 20px;
+						padding-right: 20px;
+						justify-content: flex-start;
+						align-items: center;
+						border-style: solid;
+						border-width: 1px;
+						border-color: rgba(82, 111, 155, .5);
+						border-radius: 2px;
+						background-color: #fff;
+						font-family: Pragmatica, sans-serif;
+						color: #7790b4;
+						font-weight: 200;
+						font-size: 14px;
+						letter-spacing: 0.4px;
+						transition: font-size .4s ease;
+						/*&:first-child {
+							display: none;
+						}*/
+						@media(max-width: 991px){
+							&:focus {
+								font-size: 17px;
+							}
+						}
+					}
+					.button-box {
+						position: relative;
+						border: none;
+						display: flex;
+						height: 60px;
+						min-width: 200px;
+						width: 100%;
+						margin-bottom: 10px;
+						padding-right: 20px;
+						padding-left: 20px;
+						float: left;
+						justify-content: center;
+						align-items: center;
+						flex: 0 0 auto;
+						border-radius: 0px;
+						background-color: #046ecf;
+						box-shadow: 0 1px 1px 0 rgba(82, 111, 155, .5);
+						transition: box-shadow 400ms ease, background-color 400ms ease;
+						font-family: Foros;
+						color: #f3f4f6;
+						font-size: 14px;
+						font-weight: 400;
+						letter-spacing: 0.6px;
+						cursor: pointer;
+						> span {
+							flex: 0 0 auto;
+							font-family: Roboto, sans-serif;
+							color: #fff;
+							font-size: 16px;
+							line-height: 1.2em;
+							font-weight: 400;
+							letter-spacing: 0.6px;
+						}
+						&:hover {
+							background-color: #05a5ff;
+							box-shadow: 0 10px 40px 0 rgba(82, 111, 155, .5);
+						}
+					}
+					@media (max-width: 991px){
+						margin-top: 20px;
+						margin-left: 0px;
+						.text-field-standart {
+							width: 100%;
+						}
+						.button-box {
+							min-width: 100%;
+							float: left;
+							justify-content: center;
+							
+						}
+					}
+					@media (max-width: 767px){
+						.text-field-standart {
+							width: auto;
+							min-width: 280px;
+							margin-left: auto;
+							margin-right: auto;
+							float: none;
+							margin-bottom: 10px;
+						}
+						.button-box {
+							width: auto;
+							min-width: 280px;
+							margin-left: auto;
+							margin-right: auto;
+							float: none;
+							justify-content: center;
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

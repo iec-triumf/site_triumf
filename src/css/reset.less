@@ -1,10 +1,59 @@
+*:after, *:before {
+	box-sizing: border-box;
+}
+body {
+	font-family: Roboto, sans-serif;
+	color: #7790b4;
+	font-size: 18px;
+	line-height: 1.6em;
+	font-weight: 300;
+	cursor: default;
+}
 img {
 	border: 0px;
 	vertical-align: middle;
 	max-width: 100%;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: Roboto, sans-serif;
+	cursor: default;
+	color: #153466;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+h1 {
+	font-size: 60px;
+	line-height: 1em;
+	font-weight: 300;
+	letter-spacing: 0px;
+}
+h2 {
+	font-size: 42px;
+	line-height: 1.2em;
+	font-weight: 300;
+}
+h3 {
+	font-size: 30px;
+	line-height: 1.2em;
+	font-weight: 300;
+}
+h4 {
+	
+}
+h5 {
+	
+}
+h6 {
+	
+}
+a, input, button {
+	&, &:hover, &:focus {
+		outline: none;
+	}
+}
 .will {
-	will-change: transform;
+	will-change: transform, opacity;
+	transition: all .1s ease;
 }
 .clearfix {
 	&:before, &:after {
@@ -15,4 +64,71 @@ img {
 }
 .user-select {
 	user-select: none;
+}
+.line {
+	&:after {
+		display: block;
+		position: relative;
+		content: "";
+		width: 180px;
+		height: 2px;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+	&.linered {
+		&:after {
+			background-color: #f62306;
+		}
+	}
+}
+.button {
+	&-box {
+		&-big {
+			.user-select();
+			position: relative;
+			display: flex;
+			height: 60px;
+			min-width: 200px;
+			margin-bottom: 10px;
+			padding-right: 20px;
+			padding-left: 20px;
+			float: left;
+			justify-content: space-between;
+			align-items: center;
+			flex: 0 0 auto;
+			border-radius: 2px;
+			background-color: #046ecf;
+			box-shadow: 0 0 0 0 rgba(82, 111, 155, .5);
+			transition: box-shadow 400ms ease;
+			font-family: Roboto, sans-serif;
+			color: #fff;
+			font-size: 16px;
+			line-height: 1.2em;
+			font-weight: 400;
+			letter-spacing: 0.6px;
+			cursor: pointer;
+			&:hover {
+				box-shadow: 0 10px 40px 0 rgba(82, 111, 155, .5);
+			}
+			&, &:hover, &:focus {
+				text-decoration: none;
+			}
+			&.blue {
+				&:hover {
+					
+				}
+			}
+			&.red {
+				justify-content: center;
+				background-color: #f62306;
+				&:hover {
+					
+				}
+			}
+		}
+	}
+}
+.animated_triumf {
+	animation-duration: .75s;
+	animation-fill-mode: both;
 }
