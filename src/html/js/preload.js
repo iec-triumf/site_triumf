@@ -1,6 +1,6 @@
 window.scaleKof		= .14;
 window.transAniY	= .4;
-window.wowOffset	= .1;
+window.wowOffset	= .5;
 yepnope('https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js', undefined, function() {
 	WebFont.load({
 		google: {

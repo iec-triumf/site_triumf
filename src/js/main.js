@@ -23,10 +23,10 @@
 			});
 		};
 	$('body').removeClass('start').addClass("oninit");
-	
+	$('.mainmenu').addClass('modetop');
 	$('.preloader-progress-bar').stop().animate({
 			width: '50%'
-	}, 2000);
+	}, 1000);
 	
 	$(window).on("load", function(){
 		$("body").removeClass("start oninit");
@@ -50,6 +50,9 @@
 				setTimeout(function(){
 					$("body").removeClass("complete preload oninit start");
 				}, 300);
+				setTimeout(function(){
+					$('.mainmenu').removeClass('modetop');
+				}, 500)
 			})
 		});
 		
