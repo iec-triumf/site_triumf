@@ -1,6 +1,6 @@
 (function(document, window, $){
-	var initslick = function(){
-			$(".slick").each(function(){
+	var initslick = function($selector){
+			$selector.each(function(){
 				var $this = $(this),
 					$parent = $this.parent(),
 					$dots = $(".slick-usedots", $parent),
@@ -181,7 +181,9 @@
 				display: "block",
 				opacity: 0,
 				'z-index': 5
-			}).animate({
+			});
+			$(".slick", $next).slick('setPosition');
+			$next.animate({
 				opacity: 1
 			}, 400, function(){
 				$(this).css({display:""}).addClass("active");
@@ -231,7 +233,7 @@
 		}
 		return !1;
 	});
-	initslick();
+	initslick($(".slick"));
 	
 	$(window).trigger("resize.transY").trigger("resize.scale");
 	var wnScroll = 0;
