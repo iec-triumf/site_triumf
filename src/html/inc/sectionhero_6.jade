@@ -1,0 +1,22 @@
+section.section.homepage.feedback
+    .feedback-wrapper
+        .section_hero-content
+            .feedback-wrapper-block
+                .section-row
+                    .feedback-message
+                    .column-standart.col.col-md-4.col-sm-12
+                        h6.feedback-wrapper-title
+                            |Оставьте ваши контактные данные и мы обязательно перезвоним
+                    .column-standart.col.col-md-8.col-sm-12
+                        .feedback-wrapper-block
+                            form.section-row.field-container(name="formfeedback" method="post" action="/")
+                                .feedback-message.col.col-xs-12
+                                .feedback-fields
+                                    .col.col-md-4.col-sm-6.col-xs-12
+                                        input(type="text" name="first_name" placeholder="Фамилия")
+                                    .col.col-md-4.col-sm-6.col-xs-12
+                                        input(type="text" name="last_name" placeholder="Пожалуйста представьтесь")
+                                    .col.col-md-4.col-sm-6.col-xs-12
+                                        input(type="text" name="phone" placeholder="+7(999)999-99-99")
+                                    .col.col-md-4.col-xs-12
+                                        input(type="submit" value="Жду звонка").button-box

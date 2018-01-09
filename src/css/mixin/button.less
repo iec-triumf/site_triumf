@@ -1,0 +1,76 @@
+.button {
+    &-box {
+        border: 0px solid transparent;
+        touch-action: manipulation;
+        white-space: nowrap;
+        border-radius: 0px;
+        cursor: pointer;
+        .user-select();
+        &, &:focus {
+            position: relative;
+            display: flex;
+            height: 60px;
+            min-width: 200px;
+            margin-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            float: left;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 auto;
+            border-radius: 2px;
+            background-color: #046ecf;
+            box-shadow: 0 1px 1px 0 rgba(82,111,155,.5);
+            transition: box-shadow .4s ease,background-color .4s ease;
+            color: #f3f4f6;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: .6px;
+            cursor: pointer;
+            text-decoration: none!important;
+        }
+        &:hover {
+            background-color: #05a5ff;
+            box-shadow: 0 10px 40px 0 rgba(82,111,155,.5);
+            color: #fff;
+        }
+        &.red {
+            &, &:focus {
+                background-color: #f62306;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #ff6700;
+            }
+        }
+        &.red-white {
+            &, &:focus {
+                background-color: #fff;
+                border: 2px solid #f62306;
+                color: #f62306;
+                transition: box-shadow .4s ease, background-color .4s ease, color .4s ease;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #f62306;
+            }
+        }
+    }
+}
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=mail],
+input[type=password] {
+    color: #333 !important;
+    &::-moz-placeholder {
+        color: #333 !important;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: #333 !important;
+    }
+    &::-webkit-input-placeholder  {
+        color: #333 !important;
+    }
+}

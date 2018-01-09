@@ -1,0 +1,107 @@
+.slick {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	.user-select();
+	&-item {
+		&, * {
+			outline: none !important;
+		}
+	}
+	&-usedots {
+		.user-select();
+		position: relative;
+		z-index: 3;
+		.slick-dots {
+			bottom: 8px;
+		}
+		li {
+			width: 20px;
+			height: 2px;
+			background-color: #859dc0;
+			transition: 400ms;
+			margin-left: 4px;
+			margin-right: 4px;
+			border: 0px solid #cecece;
+			transition: all .4s ease;
+			span {
+				display: block;
+				width: 100%;
+				height: 2px;
+				//background-color: #859dc0;
+				cursor: pointer;
+				outline: none !important;
+			}
+			&.slick-active {
+				width: 80px;
+				background-color: #106bce;
+				transition: all .4s ease;
+			}
+		}
+	}
+	&-usearrows {
+		position: relative;
+		height: 40px;
+		z-index: 1;
+		.clearfix();
+		.user-select();
+		.text-left();
+		@media(max-width: 991px){
+			.text-center();
+		}
+		.arrow {
+			background-color: #fff;
+			box-shadow: 0 0 1px 0 rgba(82, 111, 155, .5);
+			color: #153466;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 20px;
+			//float: left;
+			margin-top:20px;
+			overflow: hidden;
+			position: relative;
+			width: 40px;
+			height: 40px;
+			.text-center();
+			transition: box-shadow 400ms ease;
+			.webfont {
+				font-family: webfont;
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 40px;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				width: 1em;
+				height: 1em;
+			}
+			&-next {
+				.webfont {
+					&:before {
+						content: "\e600";
+					}
+				}
+			}
+			&-prev {
+				.webfont {
+					&:before {
+						content: "\e601";
+					}
+				}
+			}
+			&:hover {
+				box-shadow: 0 6px 20px 0 rgba(82, 111, 155, .5);
+			}
+			+ .arrow {
+				margin-left: 15px;
+			}
+		}
+	}
+}

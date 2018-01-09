@@ -1,0 +1,32 @@
+.informations {
+    .tabs {
+        .tab{
+            &-item{
+                &-photo{
+                    background-position: 50% 50%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        &-content{
+            &-pane{
+                &-item{
+                    min-height: auto;
+                    .slick{
+                        &-usearrows{
+                            .arrow {
+                                @media(max-width: 991px){
+                                    margin-top:80px;
+                                }
+                                @media(max-width: 768px){
+                                    margin-top:60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

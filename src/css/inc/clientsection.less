@@ -1,0 +1,81 @@
+.clientsection {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    .clientsection{
+        &-wrapper {
+            position: relative;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            justify-content: space-between;
+            .section_hero-content {
+                flex-direction: column;
+            }
+            &-block {
+                display: block;
+                width: 100%;
+                position: relative;
+            }
+        }
+        &-nav {
+            margin-bottom: 40px;
+            > ul {
+                    padding: 0;
+                	margin: 0;
+                	list-style: none;
+                	display: flex;
+                	flex-direction: row;
+                	justify-content: space-between;
+                	flex-wrap: wrap;
+                	align-items: center;
+                	align-content: flex-start;
+                    > li {
+                    	display: flex;
+                    	width: auto;
+                    	height: auto;
+                    	margin-right: 10px;
+                    	margin-bottom: 10px;
+                    	margin-left: 10px;
+                    	padding: 0;
+                    	justify-content: center;
+                    	align-items: center;
+                    	background-color: transparent;
+                    	font-size: 16px;
+                    	line-height: 1.2em;
+                    	font-weight: 400;
+                    	text-align: left;
+                    	letter-spacing: .4px;
+                        > a {
+                            display: block;
+                            transition: color .2s ease;
+                            color: #046ecf;
+                            &, &:hover, &:focus {
+                                text-decoration: none;
+                            }
+                            &:hover {
+                                color: #05a5ff;
+                            }
+                        }
+                    }
+                    @media(max-width: 991px) {
+                        justify-content: center;
+                    }
+                }
+        }
+        &-button {
+            position: relative;
+        	z-index: 2;
+        	display: flex;
+        	width: 100%;
+        	margin-right: auto;
+        	margin-left: auto;
+        	flex-wrap: nowrap;
+        	justify-content: center;
+        }
+    }
+}

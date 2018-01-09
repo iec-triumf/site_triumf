@@ -33,6 +33,7 @@
     "Jarallax": "https://github.com/CodeHunger/Jarallax.git",
     "jquery.scroolly": "https://github.com/chayka/jQuery.Scroolly.git#^0.0.1",
     "wow": "wowjs#^1.1.2",
-    "animate.css": "https://github.com/daneden/animate.css.git#^3.5.2"
+    "animate.css": "https://github.com/daneden/animate.css.git#^3.5.2",
+    "normalize-css": "^7.0.0"
   }
 }

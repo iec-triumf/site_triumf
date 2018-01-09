@@ -6,7 +6,7 @@ module.exports = function(grunt){
 		projectName: 'Сайт ТРИУМФ',
 		template: "triumf"
 	};
-	var files = [ 
+	var files = [
 		'bower_components/Jarallax/source/jarallax.js',
 		'bower_components/Jarallax/source/jarallax_tools.js',
 		'bower_components/Jarallax/source/jarallax_controller.js',
@@ -61,8 +61,12 @@ module.exports = function(grunt){
 					'assets/templates/<%= globalConfig.template%>/js/app.js' : [
 						'bower_components/jquery/dist/jquery.js',
 						'bower_components/jquery.easing/jquery.easing.js',
-						'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.js',
+						'src/js/browser.js',
+						//'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.js',
 						'bower_components/jquery-mousewheel/jquery.mousewheel.js',
+						'bower_components/jquery.maskedinput/dist/jquery.maskedinput.js',
+						'bower_components/jquery.transform.js/jquery.transform2d.js',
+						'bower_components/jquery.transform.js/jquery.transform3d.js',
 						'bower_components/jquery.scroolly/src/jquery.scroolly.js',
 						'bower_components/slick-carousel/slick/slick.js',
 						'bower_components/parallax.js/parallax.js',
@@ -85,6 +89,8 @@ module.exports = function(grunt){
 			main: {
 				files: {
 					'assets/templates/<%= globalConfig.template%>/js/main.js': [
+						'src/js/heroanimate.js',
+						'src/js/backgroundEffect.js',
 						'src/js/dropdown.js',
 						'src/js/main.js',
 					]
@@ -96,6 +102,9 @@ module.exports = function(grunt){
 				files : {
 					'test/css/main.css' : [
 						'src/css/main.less'
+					],
+					'test/css/animate.css' : [
+						'src/css/ani.less'
 					]
 				},
 				options : {
@@ -109,32 +118,32 @@ module.exports = function(grunt){
 				browsers: ['last 2 versions', 'Android 4', 'ie 8', 'ie 9', 'Firefox >= 27', 'Opera >= 12.0', 'Safari >= 6'],
 				cascade: false
 			},
-			normalize: {
-				expand: true,
-				flatten: true,
-				src: [
-					'bower_components/normalize-css/normalize.css'
-				],
-				dest: 'test/css/main_pref/'
-			},
 			css: {
 				expand: true,
 				flatten: true,
 				src: [
-					'test/css/main.css'
+					'test/css/main.css',
+					'test/css/animate.css'
 				],
 				dest: 'test/css/main_pref/'
 			}
 		},
 		cssmin: {
+			options: {
+				level: {
+					1: {
+						specialComments: 0
+					}
+				}
+			},
 			target: {
 				files: {
 					'assets/templates/<%= globalConfig.template%>/css/main.css': [
 						'test/css/main_pref/main.css'
 					],
-					'assets/templates/<%= globalConfig.template%>/css/normalize.css': [
-						'test/css/main_pref/normalize.css'
-					]
+					'assets/templates/<%= globalConfig.template%>/css/animate.css': [
+						'test/css/main_pref/animate.css'
+					],
 				}
 			}
 		},
@@ -199,7 +208,27 @@ module.exports = function(grunt){
 				]
 			}
 		},
+		copy: {
+			main: {
+				expand: true,
+				cwd: 'src/fonts',
+				src: '**',
+				dest: 'assets/templates/<%= globalConfig.template%>/fonts/',
+			},
+		},
+		clean: {
+			folder: [
+				'assets/templates/<%= globalConfig.template%>/fonts/'
+			]
+		},
 		notify: {
+			init: {
+				options: {
+					title: "<%= globalConfig.projectName %> v<%= pkg.version %>",
+					message: 'Waiting...',
+					image: '<%= globalConfig.imageNotyfy %>'
+				}
+			},
 			watch: {
 				options: {
 					title: "<%= globalConfig.projectName %> v<%= pkg.version %>",
@@ -208,7 +237,7 @@ module.exports = function(grunt){
 				}
 			},
 			done: {
-				options: { 
+				options: {
 					title: "<%= globalConfig.projectName %> v<%= pkg.version %>",
 					message: "Успешно Завершено",
 					image: '<%= globalConfig.imageNotyfy %>'
@@ -221,9 +250,11 @@ module.exports = function(grunt){
 			},
 			html: {
 				files: [
-					'src/html/**/*.php',
+					'src/html/php/*.php',
 					'src/html/**/*.jade',
-					'src/html/**/*.tpl',
+					'src/html/js/*.js',
+					'src/html/tpl/*.tpl',
+
 				],
 				tasks: [
 					'jade',
@@ -232,6 +263,7 @@ module.exports = function(grunt){
 			},
 			js: {
 				files: [
+					'src/js/*.js',
 					'src/js/**/*.js'
 				],
 				tasks: [
@@ -282,11 +314,24 @@ module.exports = function(grunt){
 					'jade',
 					'notify:done'
 				]
+			},
+			fonts: {
+				files: [
+					'src/fonts/**.*'
+				],
+				tasks: [
+					'notify:watch',
+					'clean',
+					'copy',
+					'notify:done'
+				]
 			}
 		}
 	});
 	grunt.registerTask('default', 	[
 		'notify:watch',
+		'clean',
+		'copy',
 		'imagemin',
 		'modernizr',
 		'concat',
@@ -298,6 +343,7 @@ module.exports = function(grunt){
 		'notify:done'
 	]);
 	grunt.registerTask('dev', 	[
+		'notify:init',
 		'watch'
 	]);
 }

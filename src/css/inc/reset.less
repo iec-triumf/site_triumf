@@ -1,0 +1,89 @@
+* {
+	&, &:after, &:before {
+		box-sizing: border-box;
+	}
+}
+body {
+	font-family: Roboto, Arial, sans-serif;
+	background-color: #fff;
+	color: #7790b4;
+	font-size: 18px;
+	line-height: 1.6em;
+	font-weight: 300;
+	cursor: default;
+}
+img {
+	border: 0px;
+	vertical-align: middle;
+	max-width: 100%;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 11px;
+}
+a,
+button,
+input[type=submit],
+input[type=button] {
+	&, &:focus {
+		outline: none;
+	}
+}
+a {
+	&, &:focus {
+		color: #046ecf;
+	}
+	&:hover {
+		color: #05a5ff;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	cursor: default;
+	color: #153466;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+h1 {
+	font-size: 60px;
+	line-height: 1em;
+	font-weight: 300;
+	letter-spacing: 0px;
+}
+h2 {
+	font-size: 42px;
+	line-height: 1.2em;
+	font-weight: 300;
+}
+h3 {
+	font-size: 30px;
+	line-height: 1.2em;
+	font-weight: 300;
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+.will {
+	will-change: transform,opacity;
+}
+.color-line {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	right: 0;
+	bottom: 250px;
+	height: 250px;
+	min-width: 100vw;
+	background-color: #f3f4f6;
+}
+.overflow {
+	overflow: unset;
+	&-hidden {
+		overflow: hidden;
+	}
+}
