@@ -4,6 +4,7 @@
 	/*$('.preloader-progress-bar').css({width: "25%"}).stop().animate({
 			width: '50%'
 	}, 1000);*/
+	
 
 	$(window).on("load", function(){
 		$("body").removeClass("start oninit");

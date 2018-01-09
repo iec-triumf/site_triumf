@@ -35,6 +35,7 @@
     "wow": "wowjs#^1.1.2",
     "animate.css": "https://github.com/daneden/animate.css.git#^3.5.2",
     "normalize-css": "^7.0.0",
-    "jquery.maskedinput": "^1.4.1"
+    "jquery.maskedinput": "^1.4.1",
+    "jquery.transform.js": "https://github.com/louisremi/jquery.transform.js.git"
   }
 }
